@@ -1,5 +1,5 @@
 {
-  "name": "Workout App",
+  "name": "workout-app",
   "version": "1.0.0",
   "description": "A personal fitness app made to keep track of my own muscle-gaining journey. Node/Express, React-Redux, MySQL",
   "main": "server.js",
