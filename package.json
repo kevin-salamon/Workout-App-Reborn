@@ -1,7 +1,7 @@
 {
-  "name": "Kevin-Gets-Strong",
+  "name": "Workout App",
   "version": "1.0.0",
-  "description": "A personal fitness app made to keep track of my own muscle-gaining journey. MERN stack.",
+  "description": "A personal fitness app made to keep track of my own muscle-gaining journey. Node/Express, React-Redux, MySQL",
   "main": "server.js",
   "scripts": {
     "start": "if-env NODE_ENV=production && npm run start:prod || npm run start:dev",
