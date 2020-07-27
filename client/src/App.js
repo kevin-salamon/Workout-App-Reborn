@@ -1,22 +1,15 @@
-import React, { Component } from 'react';
+import React from 'react';
 import store from './store/Store';
 import { Provider } from 'react-redux';
+import Homepage from './pages/Homepage';
 
-class App extends Component {
+function App() {
 
-  constructor(props) {    
-    super(props);    
-    this.state = { 
-    };  
-  }
-
-  render() {
     return (
       <Provider store={store}>
-        <h1>Test</h1>
+        <Homepage />
       </Provider>
     );
-  }
 
 }
 

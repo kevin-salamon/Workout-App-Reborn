@@ -8,7 +8,7 @@ export default (state = initialState, action) => {
     switch(action.types) {
       case GET_ITEMS:
         return {
-            ...state
+          ...state
         }
       default:
         return {
