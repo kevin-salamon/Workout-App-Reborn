@@ -1,17 +1,14 @@
 import { GET_ITEMS, ADD_ITEM, UPDATE_ITEM, DELETE_ITEM } from '../../types/Types';
+import { getSavedWorkouts } from "../../utils/API";
 
-export const getItems = () => {
-    type: GET_ITEMS
-}
 
-export const addItem = () => {
-    type: ADD_ITEM
-}
-
-export const updateItem = () => {
-    type: UPDATE_ITEM
-}
-
-export const deleteItem = () => {
-    type: DELETE_ITEM
+export const getItems = () => dispatch => {
+    getSavedWorkouts()
+        .then(res => res.json())
+        .then(workouts =>
+            dispatch({
+                type: GET_ITEMS,
+                payload: workouts
+            })
+        )
 }
