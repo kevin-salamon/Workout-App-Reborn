@@ -1,13 +1,7 @@
-import { GET_ITEMS, ADD_ITEM, UPDATE_ITEM, DELETE_ITEM } from '../../types/Types';
-import uuid from 'uuid';
+import { GET_ITEMS } from '../../types/Types';
 
 const initialState = {
-  items: [
-    { id: uuid(), name: 'Item 1' },
-    { id: uuid(), name: 'Item 2' },
-    { id: uuid(), name: 'Item 3' },
-    { id: uuid(), name: 'Item 4' }
-  ]
+  items: []
 };
 
 export default (state = initialState, action) => {
@@ -16,19 +10,9 @@ export default (state = initialState, action) => {
         return {
             ...state
         }
-      case ADD_ITEM:
-        return {
-            ...state
-        }
-      case UPDATE_ITEM:
-        return {
-            ...state
-        }
-      case DELETE_ITEM:
-        return {
-            ...state
-        }
       default:
-        return;
+        return {
+          ...state
+        }
     }
 }
