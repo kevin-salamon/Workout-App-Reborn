@@ -4,15 +4,14 @@ const initialState = {
   items: []
 };
 
-export default (state = initialState, action) => {
-    switch(action.types) {
+export default function(state = initialState, action) {
+    switch(action.type) {
       case GET_ITEMS:
         return {
-          ...state
+          ...state,
+          items: action.payload
         }
       default:
-        return {
-          ...state
-        }
+        return state
     }
 }
