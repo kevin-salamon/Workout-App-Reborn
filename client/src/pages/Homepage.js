@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { getItems } from '../components/List/ListActions';
+import '../style.css';
 
 class Homepage extends Component {
 
@@ -17,11 +18,18 @@ class Homepage extends Component {
                 <p>Protein: {workout.protein}</p>
             </div>
         ))
+        
         return(
+            <>
+            <nav className="nav header-custom">
+                <img src={require("../images/logo.png")} className="logo" alt={"logo"} />
+            </nav>
+
             <div>
                 <h1>Workouts</h1>
                 {workoutItems}
             </div>
+            </>
         );
     }
   
